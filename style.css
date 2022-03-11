@@ -30,10 +30,10 @@ body {
 
 main {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     max-width: 100%;
-    gap: 4rem;
+    gap: 3.1rem;
 }
 
 .primary-heading {
@@ -104,9 +104,9 @@ main {
     max-width: 100%;
     text-align: center;
     color: var(--color-gray-blue);
+    font-weight: bolder;
 }
 
 .service span {
     color: var(--color-primary-red);
-    font-weight: bolder;
 }
