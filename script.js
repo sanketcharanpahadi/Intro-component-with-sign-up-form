@@ -4,41 +4,43 @@ const emailEl = document.querySelector(".email");
 const passwordEl = document.querySelector(".password");
 const errorMsg = document.querySelector(".err");
 const inputEls = document.querySelectorAll("input");
-const claimBtn = document.querySelector(".claim")
+const claimBtn = document.querySelector(".claim");
+const form = document.querySelector(".trial");
+const errEmail = document.querySelector(".err-email");
 const regexExp = /^([a-z0-9\.-]+)@([a-z0-9-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/i;
 
-// inputEls.forEach((ele) => {
-//   if (ele.value === "") {
-//     // console.log(ele.className)
-//     let classEL = ele.className;
-//     let El = document.getElementsByClassName(classEL)[0];
-//     let attributeEl = El.name;
-//     let b = document.getElementsByClassName(`err-${attributeEl}`);
-//     b[0].textContent = `${El.placeholder} cannot be empty`;
-//   }
-// });
-
 function regexCheck(exp) {
-    return regexCheck.test(exp);
+  return regexExp.test(exp);
 }
 
+claimBtn.addEventListener("click", function (e) {
+  e.preventDefault();
 
-
-claimBtn.addEventListener("click", function(e) {
-    inputEls.forEach((ele) => {
-        if (ele.value === "") {
-          // console.log(ele.className)
-          let classEL = ele.className;
-          let El = document.getElementsByClassName(classEL)[0];
-          let attributeEl = El.name;
-          let b = document.getElementsByClassName(`err-${attributeEl}`);
-          b[0].textContent = `${El.placeholder} cannot be empty`;
-        }
-      });
-
-      if(ele.value !== null || ele.value !== "") {
-          if(! regexCheck(ele.value)) {
-              document.querySelector('.err-email').textContent = "Looks like this is not an email";
-          }
+  inputEls.forEach((ele) => {
+    if (ele.value === "") {
+      let classEL = ele.className;
+      let El = document.getElementsByClassName(classEL)[0];
+      let attributeEl = El.name;
+      let b = document.getElementsByClassName(`err-${attributeEl}`);
+      b[0].textContent = `${El.placeholder} cannot be empty`;
+      b[0].style.visibility = "visible";
+    } else {
+      let classEL = ele.className;
+      let El = document.getElementsByClassName(classEL)[0];
+      let attributeEl = El.name;
+      let b = document.getElementsByClassName(`err-${attributeEl}`);
+      if (ele !== emailEl) {
+        b[0].style.visibility = "hidden";
       }
-})
+    }
+  });
+
+  if (emailEl.value !== null && emailEl.value !== "") {
+    if (!regexCheck(emailEl.value)) {
+      errEmail.textContent = "Looks like this is not an email";
+      console.log(errEmail.textContent);
+    } else {
+      form.submit();
+    }
+  }
+});

@@ -128,6 +128,7 @@ main {
     border: transparent;
     text-transform: uppercase;
     box-shadow: 0 .3rem #27a16e;
+    cursor: pointer;
 }
 
 .service {
