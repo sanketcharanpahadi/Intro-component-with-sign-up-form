@@ -110,3 +110,61 @@ main {
 .service span {
     color: var(--color-primary-red);
 }
+
+@media (max-width: 860px) {
+
+    body {
+        padding: 8rem 2rem;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    .primary-heading {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .primary-para {
+        font-size: 1.7rem;
+    }
+
+    .try {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+        margin: 2rem auto;
+        padding: 2.5rem 5.3rem;
+    }
+
+    .service{
+        max-width: 75%;
+        margin: 0 auto;
+        font-weight: lighter;
+        font-size: 1.1rem;
+    }
+
+    .service span {
+        font-weight: bold;
+    }
+
+    [type="text"], [type="password"], .claim {
+        margin-bottom: 1.5rem;
+        border-radius: .7rem;
+    }
+
+    .claim {
+        font-weight: normal;
+        font-size: 1.6rem;
+    }
+
+    .trial {
+        border-radius: 1rem;
+        padding: 2.5rem 0;
+    }
+}
