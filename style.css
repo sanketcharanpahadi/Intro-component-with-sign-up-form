@@ -108,14 +108,19 @@ main {
     display: none;
 }
 
-.err {
+.err-firstname,
+.err-lastname,
+.err-email,
+.err-password {
     position: absolute;
     color: var(--color-primary-red);
     bottom: -35%;
     right: 7%;
     font-style: italic;
-    display: none;
+    visibility: hidden;
 }
+
+
 
 .claim {
     background-color: var(--color-primary-green);
@@ -193,4 +198,10 @@ main {
         border-radius: 1rem;
         padding: 2.5rem 0;
     }
+}
+
+/* UTILITIES */
+
+.hidden {
+    display: none;
 }
