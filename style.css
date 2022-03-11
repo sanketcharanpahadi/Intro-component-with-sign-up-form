@@ -92,6 +92,31 @@ main {
     border: 1px solid var(--color-gray-blue);
 }
 
+/* [type="text"] {
+    position: relative;
+} */
+
+.fname,.lname, .e-mail, .pass-word{
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    right: 11%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.err {
+    position: absolute;
+    color: var(--color-primary-red);
+    bottom: -35%;
+    right: 7%;
+    font-style: italic;
+    display: none;
+}
+
 .claim {
     background-color: var(--color-primary-green);
     color: #fff;
@@ -114,7 +139,8 @@ main {
 @media (max-width: 860px) {
 
     body {
-        padding: 8rem 2rem;
+        padding: 8rem 2.3rem;
+        padding-bottom: 6rem;
     }
 
     main {
@@ -155,7 +181,7 @@ main {
 
     [type="text"], [type="password"], .claim {
         margin-bottom: 1.5rem;
-        border-radius: .7rem;
+        border-radius: .6rem;
     }
 
     .claim {
