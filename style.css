@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary-red: hsl(0, 100%, 74%);
+    --color-primary-green: hsl(154, 59%, 51%);
+    --color-accent-blue: hsl(248, 32%, 49%);
+    --color-dark-blue: hsl(249, 10%, 26%);
+    --color-gray-blue: hsl(246, 25%, 77%);
+}
+
+html {
+    font-size: 62.5%;
+}   
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-primary-red);
+    background-image: url(./images/bg-intro-desktop.png);
+    background-size: 100%;
+    background-position: center;
+    padding: 10rem 10rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    gap: 4rem;
+}
+
+.primary-heading {
+    font-size: 5rem;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+
+.primary-para {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.try {
+    border: none;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 1.5rem 1.5rem;
+    width: 550px;
+    border-radius: 8px;
+    background: var(--color-accent-blue);
+    color: #fff;
+    font-family: inherit;
+    box-shadow: 0 .7rem rgb(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.try:focus {
+    outline: none;
+}
+
+.try span {
+    font-weight: bold;
+}
+
+.trial {
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 4rem 0;
+    box-shadow: 0 .7rem rgb(0, 0, 0, 0.2);
+}
+
+[type="text"], [type="password"], .claim {
+    display: block;
+    width: 86%;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    border-radius: .4rem;
+    border: none;
+    border: 1px solid var(--color-gray-blue);
+}
+
+.claim {
+    background-color: var(--color-primary-green);
+    color: #fff;
+    border: transparent;
+    text-transform: uppercase;
+    box-shadow: 0 .3rem #27a16e;
+}
+
+.service {
+    max-width: 100%;
+    text-align: center;
+    color: var(--color-gray-blue);
+}
+
+.service span {
+    color: var(--color-primary-red);
+    font-weight: bolder;
+}
